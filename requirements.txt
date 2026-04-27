@@ -1,0 +1,6 @@
+flask
+requests
+pandas
+lxml
+html5lib
+gunicorn
