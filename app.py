@@ -68,7 +68,7 @@ def calculate_prob(selected_numbers=None):
             counter[n] += 1   # ✅ 不排除 selected_numbers（核心改動）
 
     # Top 5 ranking
-    result = counter.most_common(5)
+    result = counter.most_common(8)
 
     return result, count, avg_gap
 
