@@ -149,7 +149,7 @@ button {
 <h3>📌 符合期數：{{match_count}}</h3>
 <h3>📌 平均 {{avg_gap}} 期出現一次</h3>
 
-<h3>🔥 共現 Top 5</h3>
+<h3>🔥共同出現</h3>
 {% for n,p in result %}
 <div class="card">{{n}} → {{p}} 次</div>
 {% endfor %}
