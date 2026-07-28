@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<div class="box">
+<h2>🎰 大樂透</h2>
+<form method="post">
+<div class="number-grid">
+{% for n in numbers %}
+<label>
+<input 
+type="checkbox"
+name="number"
+value="{{n}}">
+{{n}}
+</label>
+{% endfor %}
+</div>
+<button>
+分析
+</button>
+</form>
+<h3>
+選擇號碼{% for n in selected %}{{n}}
+{% endfor %}
+</h3>
+<h3>
+符合期數 {{count}}
+</h3>
+{% for n,c,p in recommend %}
+<div class="card">
+推薦 {{n}},出現{{c}}次
+</div>
+{% endfor %}
+</div>
+<div class="box">
+<h3>歷史出現號碼Top10</h3>
+{% for n,c in top10 %}
+<div class="card">
+{{n}}:出現{{c}}次
+</div>
+{% endfor %}
+<h3>
+📈 最近50期
+</h3>
+{% for n,c in recent10 %}
+<div class="card">
+{{n}}:出現{{c}}次
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
